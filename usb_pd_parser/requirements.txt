@@ -1,0 +1,27 @@
+# Core PDF processing
+pdfplumber==0.10.3
+
+# Data manipulation and analysis
+pandas==2.2.2
+numpy==1.24.3
+
+# Excel file generation
+openpyxl==3.1.2
+
+# JSON schema validation
+jsonschema==4.20.0
+
+# Progress bars and utilities
+tqdm==4.66.1
+
+# Additional text processing utilities
+regex==2023.8.8
+
+# Optional: For enhanced PDF processing
+# PyMuPDF==1.23.8  # Uncomment if you need alternative PDF processing
+# pdf2image==1.16.3  # Uncomment if you need image extraction
+
+# Development and testing (optional)
+# pytest==7.4.0
+# black==23.7.0
+# flake8==6.0.0

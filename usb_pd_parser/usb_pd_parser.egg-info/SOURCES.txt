@@ -1,0 +1,15 @@
+README.md
+setup.py
+parser/__init__.py
+parser/config.py
+parser/core.py
+parser/document_configs.py
+parser/schemas.py
+parser/utils.py
+parser/validation.py
+usb_pd_parser.egg-info/PKG-INFO
+usb_pd_parser.egg-info/SOURCES.txt
+usb_pd_parser.egg-info/dependency_links.txt
+usb_pd_parser.egg-info/entry_points.txt
+usb_pd_parser.egg-info/requires.txt
+usb_pd_parser.egg-info/top_level.txt
