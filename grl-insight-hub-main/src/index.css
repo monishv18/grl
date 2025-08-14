@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PDF Processing Tool Design System - Modern Professional Interface */
+
+@layer base {
+  :root {
+    /* Brand Colors - Professional Blue to Purple Gradient */
+    --background: 240 100% 99%;
+    --foreground: 222 84% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 15%;
+
+    /* Primary - Deep Professional Blue */
+    --primary: 231 69% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 231 69% 45%;
+
+    /* Secondary - Light Blue Gray */
+    --secondary: 214 32% 95%;
+    --secondary-foreground: 222 47% 15%;
+
+    /* Muted - Soft Gray */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Purple for highlights */
+    --accent: 262 69% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 231 69% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(231 69% 55%), hsl(262 69% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(214 32% 95%), hsl(210 40% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(231 69% 55%), hsl(262 69% 55%), hsl(291 64% 42%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 222 84% 6%;
+    --foreground: 210 40% 95%;
+
+    --card: 222 84% 8%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 222 84% 8%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 231 69% 65%;
+    --primary-foreground: 222 84% 8%;
+    --primary-hover: 231 69% 55%;
+
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 262 69% 65%;
+    --accent-foreground: 222 84% 8%;
+
+    --success: 142 76% 46%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 60%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 222 84% 8%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 231 69% 65%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(231 69% 65%), hsl(262 69% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 33% 18%), hsl(215 20% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(231 69% 65%), hsl(262 69% 65%), hsl(291 64% 52%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: var(--gradient-hero);
+  }
+
+  .card-elevated {
+    @apply bg-card border border-border rounded-lg p-6 shadow-lg;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/80 text-secondary-foreground;
+  }
+
+  .upload-zone {
+    @apply border-2 border-dashed border-border rounded-lg p-8 text-center transition-all duration-300;
+  }
+
+  .upload-zone-active {
+    @apply border-primary bg-primary/5;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
