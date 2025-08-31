@@ -1,0 +1,2 @@
+[console_scripts]
+usbpd-parse = parser.scripts.parse_usb_pd:main
